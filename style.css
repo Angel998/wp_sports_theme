@@ -1,0 +1,209 @@
+/*
+    Theme Name: GymFitnessFlexCssGrid
+    Theme URI: https://geubit.com
+    Author: Angel Hernandez Hernandez
+    Author URI: angel2h.com
+    Description: Theme crearo para gimnasios
+    Version: 1.0
+    License: GNU General Public License v2 or later
+    License URI: https://www.gnu.org/licenses/gpl-2.0.html
+    Tags: gimnasio, gym, sports, deportes
+    Text Domain: gymfitnessflexcssgrid
+*/
+
+:root {
+  /* Fuentes */
+  --primary-font: 'Staatliches', cursive;
+  --secondary-font: 'Open Sans', sans-serif;
+  --text-font: 'Raleway', sans-serif;
+
+  /* Colores */
+  --primary-color: #ff5800;
+  --dark-color: #2f2e2e;
+  --light-color: #ebebeb;
+  --white-color: #ffffff;
+  --black-color: #000000;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 2;
+  font-family: var(--secondary-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--primary-font);
+  margin: 1rem 0;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 4.8rem;
+}
+
+h3 {
+  font-size: 3.6rem;
+}
+
+h4 {
+  font-size: 2.4rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.contenedor {
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* === Header === */
+.site-header {
+  background-color: var(--dark-color);
+  padding: 2rem 0;
+}
+
+.site-header .logo {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-principal li {
+  margin-right: 1rem;
+}
+
+.menu-principal a {
+  font-family: var(--primary-font);
+  color: var(--white-color);
+  font-size: 2.6rem;
+  padding: 0.5rem 2rem;
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+.menu-principal a::before,
+.menu-principal a::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 100%;
+  height: 50%;
+  background-color: var(--primary-color);
+  left: 0;
+  z-index: -1;
+  transform: scaleX(0);
+  transition: transform 0.6s;
+}
+
+.menu-principal a::before {
+  top: 0;
+  transform-origin: left;
+}
+
+.menu-principal a::after {
+  bottom: 0;
+  transform-origin: right;
+}
+
+.menu-principal a:hover::before {
+  transform: scaleX(1);
+}
+.menu-principal a:hover::after {
+  transform: scaleX(1);
+}
+
+.menu-principal .current_page_item {
+  border-bottom: 2px solid var(--primary-color);
+}
+
+/* SlickNav Format */
+.slicknav_menu {
+  background-color: var(--dark-color);
+}
+
+.slicknav_btn {
+  background-color: var(--primary-color);
+}
+
+.slicknav_nav a {
+  font-size: 2.4rem;
+  text-align: center;
+  font-family: var(--primary-font);
+}
+
+.slicknav_nav a:hover {
+  background: transparent;
+  color: var(--primary-color);
+}
+
+/* Table y Computadoras */
+@media (min-width: 768px) {
+  .site-header .barra-navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .menu-principal {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .menu-principal .menu {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .menu-principal ul {
+    margin-right: 2rem;
+  }
+
+  .menu-principal li:last-child {
+    margin-right: 0;
+  }
+
+  .slicknav_menu {
+    display: none !important;
+  }
+}
+
+/* Telefonos */
+@media (min-width: 300px) and (max-width: 767px) {
+  .site-header .menu-principal {
+    display: none;
+  }
+}
