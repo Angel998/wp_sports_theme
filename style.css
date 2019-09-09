@@ -169,7 +169,49 @@ img {
   color: var(--primary-color);
 }
 
-/* Table y Computadoras */
+/* === Footer === */
+footer hr {
+  border: 1px solid var(--light-color);
+}
+
+.contenido-footer {
+  padding: 4rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contenido-footer .copyright {
+  text-align: center;
+  font-size: 2.6rem;
+  font-family: var(--primary-font);
+}
+
+.menu-footer ul {
+  display: flex;
+}
+
+.menu-footer ul li {
+  margin-right: 1rem;
+}
+
+.menu-footer a {
+  color: var(--black-color);
+  font-family: var(--primary-font);
+  font-size: 2.6rem;
+  padding: 1rem 0.5rem;
+}
+
+.menu-footer a:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.menu-footer .current_page_item {
+  border-bottom: 2px solid var(--primary-color);
+}
+
+/* Tablet y Computadoras */
 @media (min-width: 768px) {
   .site-header .barra-navegacion {
     display: flex;
@@ -205,5 +247,9 @@ img {
 @media (min-width: 300px) and (max-width: 767px) {
   .site-header .menu-principal {
     display: none;
+  }
+
+  .contenido-footer {
+    flex-direction: column;
   }
 }

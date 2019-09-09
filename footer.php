@@ -14,7 +14,6 @@
             <?php echo get_bloginfo('name'); ?>
             &copy;
             <?php echo date('Y'); ?>
-            <?php ?>
         </p>
     </div>
 </footer>
