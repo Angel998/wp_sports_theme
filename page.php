@@ -3,19 +3,13 @@
 
 <?php get_header(); ?>
 
-<?php while (have_posts()) : the_post(); ?>
-    <div class="contenedor">
-        <h1><?php the_title(); ?></h1>
-        <p>
-            <?php
-                if (has_post_thumbnail()) :
-                    the_post_thumbnail('medium');
-                else :
-                    echo "Sin Imagen";
-                endif;
-                the_content(); ?>
-        </p>
+<main class="contenedor pagina seccion con-sidebar">
+
+    <div class="contenido-principal">
+        <?php get_template_part('template-parts/page_content'); ?>
     </div>
-<?php endwhile; ?>
+
+    <?php get_sidebar(); ?>
+</main>
 
 <?php get_footer(); ?>

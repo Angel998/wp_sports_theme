@@ -89,6 +89,23 @@ img {
   margin: 0 auto;
 }
 
+/* === Utilidades === */
+.text-center {
+  text-align: center;
+}
+
+.text-primary {
+  color: var(--primary-color);
+}
+
+.seccion {
+  padding: 5rem 0;
+}
+
+.imagen-destacada {
+  margin-bottom: 3rem;
+}
+
 /* === Header === */
 .site-header {
   background-color: var(--dark-color);
@@ -211,6 +228,11 @@ footer hr {
   border-bottom: 2px solid var(--primary-color);
 }
 
+/* === Paginas === */
+.pagina h1 {
+  margin-bottom: 4rem;
+}
+
 /* Tablet y Computadoras */
 @media (min-width: 768px) {
   .site-header .barra-navegacion {
@@ -240,6 +262,28 @@ footer hr {
 
   .slicknav_menu {
     display: none !important;
+  }
+
+  .pagina.con-sidebar {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .con-sidebar .contenido-principal {
+    flex: 0 0 calc(70% - 2rem);
+  }
+
+  .con-sidebar .sidebar {
+    flex: 0 0 calc(30% - 2rem);
+  }
+
+  .no-sidebar {
+    display: flex;
+    justify-content: center;
+  }
+
+  .no-sidebar .contenido-principal {
+    flex: 0 1 900px;
   }
 }
 
