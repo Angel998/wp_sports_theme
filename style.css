@@ -84,8 +84,8 @@ img {
 }
 
 .contenedor {
-  max-width: 1200px;
-  width: 95%;
+  max-width: 1200px !important;
+  width: 95% !important;
   margin: 0 auto;
 }
 
@@ -231,6 +231,11 @@ footer hr {
 /* === Paginas === */
 .pagina h1 {
   margin-bottom: 4rem;
+}
+
+.pagina .contenido-principal p{
+    white-space: pre-wrap !important;
+    overflow-wrap: break-word;
 }
 
 /* Tablet y Computadoras */

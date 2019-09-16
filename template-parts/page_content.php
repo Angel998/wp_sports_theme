@@ -6,7 +6,7 @@
                 if (has_post_thumbnail()) :
                     the_post_thumbnail('medium', ['class' => 'imagen-destacada']);
                 else :
-                    echo "Sin Imagen";
+                    echo "<p>Sin Imagen</p>";
                 endif;
                 the_content(); ?>
         </p>
