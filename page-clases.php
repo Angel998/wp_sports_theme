@@ -7,6 +7,8 @@
 
     <div class="contenido-principal text-center">
         <?php get_template_part('template-parts/page_content'); ?>
+
+        <?php gymfitness_lista_clases(); ?>
     </div>
 </main>
 

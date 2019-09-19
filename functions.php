@@ -1,5 +1,9 @@
 <?php
 
+
+// Queries reusables
+require get_template_directory() . '/inc/queries.php';
+
 // Cuando el tema se activa
 function gymfitness_setup()
 {
